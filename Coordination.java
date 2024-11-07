@@ -48,11 +48,11 @@ class User extends Thread {
                             this.getMyname(), 
                             book.getTitle()
                         );
+                        this.randomSleep();
                     }
-                    this.randomSleep();
                     
                 } else {
-                    System.out.printf("\tO usuário %s está esperando o livro %s ficar disponivel\n",
+                    System.out.printf("O usuário %s está esperando o livro %s ficar disponivel\n",
                         this.getMyname(),
                         book.getTitle()
                     );
@@ -63,12 +63,12 @@ class User extends Thread {
                                 booksToChoose.wait();
                                 if (!book.isWithUser()){break;}
                                 else{
-                                    System.out.printf("\tO usuário %s está esperando o livro %s ficar disponivel\n",
+                                    System.out.printf("\t\t\tO usuário %s está esperando o livro %s ficar disponivel\n",
                                         this.getMyname(),
                                         book.getTitle()
                                     );
+                                    this.randomSleep();
                                 }
-                                this.randomSleep();
                             }
                         } catch( InterruptedException e ){
                             System.out.println("Erro aqui");
@@ -90,10 +90,10 @@ class User extends Thread {
                     book = this.getIsReading();
                     booksToChoose.set(this.isReading.getLibraryId(), book);
                     this.returnBook();
-                    System.out.printf("\t\t\tO usuário %s devolveu o livro %s\n", this.getMyname(), book.getTitle());
+                    System.out.printf("O usuário %s devolveu o livro %s\n", this.getMyname(), book.getTitle());
                     booksToChoose.notify();
-                    this.randomSleep();
                 }
+                this.randomSleep();
             }
         }
    
