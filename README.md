@@ -1,6 +1,6 @@
  # Threads - Coordenação de Acesso a Livros
 
-Este projeto foi desenvolvido para a disciplina de **PSCF** (Performance de Sistemas Ciber-Físicos). O objetivo principal é coordenar o acesso de usuários a livros específicos de uma biblioteca, garantindo a disponibilidade e o uso organizado dos recursos. 
+Este projeto foi desenvolvido para a disciplina de **PSCF** (Performance de Sistemas Ciber-Físicos). O objetivo principal é coordenar o acesso de usuários a livros em uma biblioteca, garantindo a disponibilidade e o uso organizado dos recursos. 
 
 ## Objetivos do Projeto
 
